@@ -1,23 +1,23 @@
 export const reviews = [
       {
-        name: "Sabbir Hossain Abir",
+        name: "Amine Sabagh",
         image:
           "https://images.unsplash.com/photo-1594201638839-e36ddd34822d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
         description:
-          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis voluptate repellat eos, expedita culpa laboriosam vel fuga dolore unde quisquam earum explicabo aliquid, ducimus ullam saepe. Tempore, esse est. Possimus.",
+          `"We rented a car from this website and had an amazing experience! The booking was easy and the rental rates were very affordable."`,
       },
       {
-        name: "Zakaria Bin Moti",
+        name: "Nassima Harbal",
         image:
           "https://images.unsplash.com/photo-1594201638839-e36ddd34822d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi modi quaerat accusantium consectetur eos soluta dolor quas nam quos veniam expedita architecto optio fugit possimus earum reiciendis rem, dicta nemo.",
+          `"The car was in great condition and made our trip even better. Highly recommend for this car rental website!"`,
       },
       {
-        name: "Protick Saha",
+        name: "Ahmed Zindi",
         image:
           "https://images.unsplash.com/photo-1594201638839-e36ddd34822d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia amet maiores magni commodi. Voluptatem aut aliquid mollitia sunt iusto sapiente numquam culpa illo recusandae sequi nam sed eaque, accusantium nesciunt!",
+          `"We rented a car from this website and had an amazing experience! The booking was easy and the rental rates were very affordable."`,
       },
     ];

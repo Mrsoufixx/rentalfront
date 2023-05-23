@@ -13,7 +13,7 @@ function SideBar() {
         
     if(adminState){
         return <div>
-            <button className="logoutbtnDash  flex items-center gap-4 hover:text-lgrey "><Link className="nav-link hover:text-lgrey" to="/adminsignout">logout</Link><FiLogOut/></button>
+            <button className="logoutbtnDash  flex items-center gap-4 hover:text-[#393E46] "><Link className="nav-link hover:text-[#393E46]" to="/adminsignout">logout</Link><FiLogOut/></button>
         </div>
     }
     else{

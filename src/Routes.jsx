@@ -9,6 +9,8 @@ const RentaVehicule = React.lazy(()=> import("./vehicule/pages/RentaVehicule"));
 // const Rentvehiculecart = React.lazy(()=> import("./cart/RentVehiculecart"));
 const RentVehiculeReviews = React.lazy(()=> import("./vehicule/pages/RentVehiculeReviews"));
 import Spinner from './reusable/Spinner';
+import ProfilePage from "./user/auth/pages/ProfilePage";
+
 
 
 
@@ -23,12 +25,13 @@ function UserRoutes() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signout" element={<Signout />} />
+          <Route path="/profile" element={<ProfilePage />} />
           <Route path="/rentavehicule/" element={<RentaVehicule />} />
           {/* <Route path="/rentvehiculecart" element={<Rentvehiculecart />} /> */}
           <Route path="/rentvehiculereviews" element={<RentVehiculeReviews />} />
           <Route path="/mycart" element={<Mycart />} />
-          
         </Routes>
+         
     
     </React.Suspense>
   );

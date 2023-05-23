@@ -55,21 +55,21 @@ const Signin = () => {
         <>
         <Navbar />
             <div className="maincontainer">
-                <div className="firstcontainer">
+                <div className="firstcontainer mt-36">
                     <div className="titled"></div>
                         <div id = "usersignin" style = {{display:"block"}} className="content">
                         <h2 className='text-center text-3xl font-bold'>S'inscrire</h2>
                             <form method="POST" className=' mt-20'>
-                                <div className="user-details">
+                                <div className="user-details ">
 
                                     <div className="input-box">
                                         <span className="details">Email</span>
-                                        <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Enter your email" />
+                                        <input type="text" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="Ecrire votre Email" />
                                     </div>
 
                                     <div className="input-box">
-                                        <span className="details">Password</span>
-                                        <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Enter your password" />
+                                        <span className="details">Mot de passe</span>
+                                        <input type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Ecrire votre Mot de passe" />
                                     </div>
 
                                 </div>
@@ -79,8 +79,8 @@ const Signin = () => {
                                 </div>
                             </form>
                             <div className='flex justify-between'>
-                            <h3> don't have an account ? <Link style={{color: "#00ADB5"}} to="/signup">create one</Link></h3>
-                            <h3 className='hover:text-lteal'><Link >Mot de passe oublié ? </Link>  </h3>
+                            <h3> Vous avez pas un compte ? <Link style={{color: "#00ADB5"}} to="/signup">créer une </Link></h3>
+                            <h3 className='hover:text-[#00ADB5]'><Link >Mot de passe oublié ? </Link>  </h3>
                             </div>
                             
                         </div>

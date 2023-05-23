@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import SERVER_URL from "../../config";
 import { UserContext } from "../../App";
 import Navbar from "../../layouts/NavBar";
+import { FaCartPlus, FaSearch } from "react-icons/fa";
 
 const Rentavehicule = () => {
   const { state, dispatch } = useContext(UserContext);
@@ -119,9 +120,7 @@ const Rentavehicule = () => {
       });
 
       const data = await res.json();
-
       setRentVehiculesData(data);
-
       if (!res.status === 200) {
         const error = new Error(res.error);
         throw error;
@@ -134,23 +133,22 @@ const Rentavehicule = () => {
   return (
     <>
       <Navbar />
-      <div className="flex mt-40 justify-between mx-[10%]">
-        <div className="w-9/12">
+      <div className="flex mt-40 justify-between items-center mx-[10%]">
+        <div className="w-9/12 flex gap-4 mb-4">
           <input
             type="text"
             name="name"
-            placeholder="Search vehicule"
-            style={{ width: "30%", height: "8%" }}
+            placeholder="rechercher par marque ou model que vous voulez "
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
-            className="btn"
+            className="btn shadow-md shadow-[#d4d7db]"
           />
-          <button type="submit" onClick={searchTextBtn} className="btn">
-            <i className="fa fa-search"></i>
+          <button type="submit" onClick={searchTextBtn} className="btn flex justify-center items-center bg-[#393E46] shadow-md shadow-[#d4d7db]">
+            <FaSearch style={{fill:"#eee"}}/>
           </button>
         </div>
-        <div className="w-3/12">
-          <select name="categoris">
+        <div className="w-3/12 flex justify-end">
+          <select name="categoris " className="h-12 rounded-md shadow-md shadow-[#d4d7db] px-6 text-xl ">
             <option value="voitures">Voitures</option>
             <option value="camions">Camions</option>
             <option value="velo">Vélo</option>
@@ -158,7 +156,7 @@ const Rentavehicule = () => {
           </select>
         </div>
       </div>
-      <div className="rentvehiculevehiculed ">
+      <div className="rentvehiculevehiculed my-4">
         {rentVehiculesData.map((rentvehiculesData, index) => [
           <div className="vehiculedivRentvehicule" key={rentvehiculesData._id}>
             <img
@@ -166,24 +164,28 @@ const Rentavehicule = () => {
               alt=""
             />
 
-            <p>{rentvehiculesData.model}</p>
-            <h4>{rentvehiculesData.brand}</h4>
+            <p className="mt-8 text-2xl ">{rentvehiculesData.model}</p>
+            <h4 className="text-4xl font-semibold my-4">{rentvehiculesData.brand}</h4>
 
-            <div className="" key={index}>
+            <div className="w-full" key={index}>
               <form method="POST">
+                <div className="flex items-center justify-between text-xl w-full">
+                  <div className="w-5/6 flex justify-start align-baseline ">
+                  <span className="text-6xl font-bold ">{rentvehiculesData.rent}</span> MAD/Jour
+                  </div>
                 <input
                   type="number"
-                  className="vehiculedbtn"
+                  className="w-1/6 text-center"
                   name="rentforhours"
                   defaultValue={rentHours[index]}
                   onChange={(e) => handleInputs(index, e)}
-                  placeholder="Enter rent hours"
+                  placeholder="Entrer le nombre de jours"
                 />
-
-                <br />
+                </div>
+              
                 <button
                   type="submit"
-                  className="vehiculedbtn"
+                  className="btn bg-[#00ADB5] text-[#eee] text-xl hover:bg-[#0b5b5f] w-full flex justify-center gap-8"
                   onClick={(e) =>
                     proceedToCart(
                       rentvehiculesData._id,
@@ -191,9 +193,10 @@ const Rentavehicule = () => {
                       index,
                       e
                     )
-                  }
+                  } 
                 >
-                  Proceed
+                  Ajouter dans Panier
+                  <FaCartPlus size={18}/>
                 </button>
               </form>
             </div>

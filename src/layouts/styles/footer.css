@@ -40,3 +40,6 @@
       font-size: 2rem;
       color:var(--white);
   }
+  .icon{
+    fill: #222427;
+  }

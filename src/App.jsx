@@ -2,6 +2,7 @@ import React, { createContext, useReducer } from "react";
 
 import { Routes, Route } from "react-router-dom"; // import Routes component
 import "./css/App.css";
+import "./css/index.css";
 import UserRoutes from "./Routes";
 
 import Dashboard from "./admin/dashboard/DashboardRoutes";
@@ -10,8 +11,7 @@ import AdminSignout from "./admin/auth/pages/AdminSignout";
 
 import { initialState, reducer } from "./reducer/UseReducer";
 import { adminInitialState, adminreducer } from "./reducer/UseReducerAdmin";
-import ScrollToTop from "./shared/ScrollToTop";
-import UseScrollToTop from './hooks/useScrollToTop';
+
 import Spinner from './reusable/Spinner';
 
 export const UserContext = createContext();
@@ -27,9 +27,9 @@ const App = () => {
   return (
     <>
       <UserContext.Provider value={{ state, dispatch }}>
-      <ScrollToTop />
+      
         <UserRoutes />
-        <UseScrollToTop />
+        
       </UserContext.Provider>
 
       <AdminContext.Provider value={{ adminState, dispatchadmin }}>

@@ -50,13 +50,12 @@ function Contact() {
 
   return (
     <section className="contact" id="contact">
-      <h1 className="heading">
-        <span>contact</span> us
+      <h1 className="text-center text-6xl font-bold mb-10">
+        <span >contact</span> us
       </h1>
 
       <div className="row">
         <form method="POST">
-          <h3>get in touch</h3>
 
           {inputFields.map((field) => (
             <input
@@ -84,7 +83,7 @@ function Contact() {
             type="submit"
             value="Send message"
             onClick={sendMessage}
-            className="btn"
+            className="btn bg-[#222831] text-[#eeeeee] hover:bg-[#00ADB5]"
           />
         </form>
       </div>

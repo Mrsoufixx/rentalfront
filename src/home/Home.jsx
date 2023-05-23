@@ -1,11 +1,14 @@
 import React, {useState, useEffect, useContext} from 'react'
 import Banner from "./sections/Banner";
-import StaticCards from "./sections/StaticCards";
+// import StaticCards from "./sections/StaticCards";
 import Services from "./sections/Services";
 import Contact from "./sections/Contact";
 import { UserContext } from "../App"
 import NavBar from "../layouts/NavBar" 
 import Footer from "../layouts/Footer" 
+import PlanTrip from './sections/PlanTrip';
+import ScrollToTop from "../shared/ScrollToTop";
+import UseScrollToTop from '../hooks/useScrollToTop';
 
 const Home = () => {
 
@@ -43,10 +46,13 @@ const Home = () => {
   return (
     <>
     <NavBar />
+    <ScrollToTop />
       <Banner />
-      <StaticCards />
+      <PlanTrip/>
+      {/* <StaticCards /> */}
       <Services />
       <Contact />
+      <UseScrollToTop />
     <Footer />
     </>
   );

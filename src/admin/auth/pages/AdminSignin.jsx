@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import SERVER_URL from "../../../config";
 import axios from "axios";
-import "../registerStyle.css"
+import "../registerStyleAdmin.css"
 import { AdminContext } from "../../../App";
 
 const AdminSignin = () => {
@@ -52,11 +52,11 @@ const AdminSignin = () => {
         <div className="titled"></div>
 
         <div id="adminsignin" className="content">
-          <h2>Signin As Admin</h2>
-          <form method="POST">
+          <h2 className='text-center text-3xl font-bold'>Connexion Admin</h2>
+          <form method="POST" className=' mt-20'>
             <div className="user-details">
               <div className="input-box">
-                <span className="details">User Name</span>
+                <span className="details">Nom</span>
                 <input
                   type="text"
                   value={adminName}
@@ -66,7 +66,7 @@ const AdminSignin = () => {
               </div>
 
               <div className="input-box">
-                <span className="details">Password</span>
+                <span className="details">Mot de passe</span>
                 <input
                   type="password"
                   value={adminPassword}
@@ -80,11 +80,10 @@ const AdminSignin = () => {
               <input type="submit" value="signin" onClick={signinAdmin} />
             </div>
           </form>
-          <button className="btn">
-            <Link className="nav-link" to="/signin">
-              Signin As User
+          
+            <Link className="text-start font-semibold text-[#393E46] " to="/signin">
+              Se connecter en tant que' <span className="hover:text-[#00ADB5]"> Utilisateur </span>
             </Link>
-          </button>
         </div>
       </div>
     </div>
